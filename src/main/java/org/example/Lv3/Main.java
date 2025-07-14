@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Calculator <Number> calculator = new Calculator<>();
+        Calculator <Double> calculator = new Calculator<>(Double.class);
         Scanner scanner = new Scanner(System.in);
         while (true) {
             try {
