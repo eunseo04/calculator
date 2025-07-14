@@ -11,33 +11,23 @@ public class Calculator<T extends Number> {
     private ArrayList<Double> resultArr = new ArrayList<>();
     private double result;
     private double number;
-    private final Class<T> clazz;
-
-    public Calculator(Class<T> clazz) {
-        this.clazz = clazz;
-    }
 
     public void setValue1(String value1) {
-        this.value1 = convert(value1);
+        this.value1 = (T) convert(value1);
     }
     public void setValue2(String value2) {
-        this.value2 = convert(value2);
+        this.value2 = (T) convert(value2);
     }
     public void setOperator(char operator) {
         this.operator = operator;
     }
 
-    public T convert(String s) {
-        if (clazz == Integer.class) {
-            return clazz.cast(Integer.parseInt(s));
-        } else if (clazz == Double.class) {
-            return clazz.cast(Double.parseDouble(s));
-        } else if (clazz == Float.class) {
-            return clazz.cast(Float.parseFloat(s));
-        } else if (clazz == Long.class) {
-            return clazz.cast(Long.parseLong(s));
+    public Number convert(String s) {
+        if (s.contains(".")) {
+            return Double.parseDouble(s);
+        } else {
+            return Integer.parseInt(s);
         }
-        throw new IllegalArgumentException();
     }
 
     public void operation() {
