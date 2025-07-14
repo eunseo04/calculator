@@ -5,6 +5,7 @@
 
 > ##### 구현 설명
 > + Main
+>   
 > while문을 통해 양수의 값 두 개를 입력받아 switch문의 조건을 통해 연산
 >
 > ##### 에러
@@ -24,6 +25,7 @@
 
 > ##### 구현 설명
 > + Calculator 클래스
+>   
 > 속성을 통해 변수 캡슐화
 > 계산 기능 메소드(calculate) 구현
 > setter를 통한 초기화
@@ -31,6 +33,7 @@
 > ArrayList 수정 기능
 >
 > + Main 클래스
+>   
 > Calculator 클래스를 객체화한 calculator 사용
 > while문을 통해 양수의 값 두 개를 입력받아 setter로 초기화, calculate로 연산, getter로 결과 리스트 반환
 > 리스트 값의 개수는 5개가 넘어갈 경우 제일 처음 계산한 값이 자동제거됨
@@ -52,10 +55,12 @@
 
 > ##### 구현 설명
 > + OperatorType 클래스(Enum)
+>   
 > enum 열거형 생성자를 이용해 상수를 초기화
 > getter로 캡슐화된 symbol 접근
 > 연산자 비교 메서드 (fromSymbol)
 >
 > + Calculator 클래스
+>   
 > OperatorType의 fromSymbol로 연산자 비교
 > 
